@@ -49,7 +49,7 @@ void Account::login(string user, string pass){
 
     cout << "=============" << endl;
 
-    if(){
+    if(false){
         cout<< "Please login again!!!"<<endl;
         goto login;
     }
