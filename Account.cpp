@@ -1,5 +1,11 @@
 #include "Account.h"
 using namespace std;
-login(string user, string pass){
+
+Account  getUsername(){
+
+}
+
+
+string login(string user, string pass){
     
 }
