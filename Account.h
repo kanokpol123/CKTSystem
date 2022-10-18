@@ -4,7 +4,11 @@ using namespace std;
 class Account
 {
 private:
-    string position;
+    string username;
+    string password
+    string address
+    string sidnedDate
+    string privilege;
 public:
-    
+    Account()
 };
