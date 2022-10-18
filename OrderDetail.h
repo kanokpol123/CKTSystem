@@ -10,9 +10,6 @@ using namespace std;
 class OrderDetail
 {
 private:
-    //แอตทริบิวต์ Pointer เพื่อจองหน่วยความจำไปเก็บไว้ใน itemList
-    Food *OrderItem;
-
     //แอตทริบิวต์จำนวนอาหารในการสั่ง
     int foodQty;
 
@@ -20,9 +17,11 @@ private:
     list<Food*> itemList;
 public:
 
+    OrderDetail();
     //เมธอดคืนค่าลิส itemList
     list<Food*> getFoodList();
 
+    int getFoodQty();
     //เมธอดเพิ่ม Food เข้าไปใน itemList
     void addFood(Food inputFood);
     
