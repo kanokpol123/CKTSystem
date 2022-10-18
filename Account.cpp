@@ -41,5 +41,16 @@ void Account::setPrivilege(char privilege){
 }
 
 void Account::login(string user, string pass){
-    
+    login:
+    cout << "=== Login ===" << endl;
+    cout << "Enter username :";
+
+    cout << "Enter password :";
+
+    cout << "=============" << endl;
+
+    if(){
+        cout<< "Please login again!!!"<<endl;
+        goto login;
+    }
 }
