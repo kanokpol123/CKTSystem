@@ -1,9 +1,9 @@
-#ifndef ORDERDETAIL_H
+#ifndef ORDERDETAIL_H 
 #define ORDERDETAIL_H
 
 #include "Food.h"
 #include <string>
-#include <list>
+#include <map>
 
 using namespace std;
 
@@ -17,15 +17,16 @@ private:
     int foodQty;
 
     //แอตทริบิวต์ลิสของรายการอาหาร
-    list <Food*> itemList;
+    map<Food*, unsigned int> myOrder;
     
 public:
+
 
     //constructor
     OrderDetail();
 
     //เมธอดคืนค่าลิส itemList
-    list <Food*> getFoodList();
+    map<Food*, unsigned> getFoodList();
 
     int getFoodQty();
 

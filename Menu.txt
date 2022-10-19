@@ -14,7 +14,7 @@ Chicken,Chicken Pops,-,59
 Chicken,Chick 'n' Bun,-,39
 Chicken,Chink 'n' Roll,-,49
 Snack,Steamed Rice,-,25
-Snack,Regular French Fries,L,55
+Snack,Regular French Fries(L),55
 Snack,Regular French Fries,X,45
 Snack,Regular French Fries,S,35
 Snack,Egg Tart,-,25
