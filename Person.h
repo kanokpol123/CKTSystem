@@ -1,3 +1,6 @@
+#ifndef PERSON_H
+#define PERSON_H
+
 #include <string>
 using namespace std;
 
@@ -9,6 +12,7 @@ private:
     int age;
 public:
     Person(string firstname, string lastname, int age);
+    Person(string firstname, string lastname);
     string getFirstName();
     void setFirstName(string firstname);
     string getLastName();
@@ -16,3 +20,5 @@ public:
     int getAge();
     void setAge(int age);
 };
+
+#endif
