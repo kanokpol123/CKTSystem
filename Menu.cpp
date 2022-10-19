@@ -19,3 +19,7 @@ void setAmountINMenu(int amount)
 {
     
 }
+void showAllMenu()
+{
+cout << " " << endl;
+}

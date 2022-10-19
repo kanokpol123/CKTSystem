@@ -2,10 +2,10 @@
 using namespace std;
 
 string Account::getUsername(){
-
+    
 }
 void Account::setUsername(string user){
-
+    
 }
 
 string Account::getPassword(){
