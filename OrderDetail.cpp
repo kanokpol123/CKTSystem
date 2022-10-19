@@ -4,7 +4,11 @@ OrderDetail::OrderDetail(){
     foodQty = 0;
 }
 
-list<Food*> OrderDetail::getFoodList(){return itemList;}
+
+
+int OrderDetail::getFoodQty() {return foodQty;}
+
+vector <Food*> OrderDetail::getFoodList(){return itemList;}
 
 int OrderDetail::getFoodQty(){return foodQty;}
 
@@ -23,3 +27,6 @@ void OrderDetail::removeFood(int index){
         i++;
     }
 }
+
+void OrderDetail::setFoodOrder(Food* food) {this->foodOrder = food;}
+Food* OrderDetail::getFoodOrder() {return foodOrder;}
