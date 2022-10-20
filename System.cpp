@@ -117,7 +117,9 @@ void System::custInterface(string username)
                 << "Name : " << x->getFirstName() + " " + x->getLastName() << endl
                 << setfill('=') << setw(10) << "=" << " Menu " 
                 << setfill('=') << setw(11) << "=" << endl
-                << "1. Logout" << endl
+                << "1. ShowMenu" << endl
+                << "2. "
+                << "0. Logout" << endl
                 << setfill('=') << setw(27) << "=" << endl;
             break;
         }

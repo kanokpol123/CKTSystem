@@ -30,7 +30,7 @@ int main()
     cout << "Choose Menu : ";
     cin >> choice;
 
-    if (!cin >> choice || !exceptionCatch(1, 3, choice))
+    if (!cin >> choice || !exceptionCatch(0, 3, choice))
     {
         cout << "Choice must be 1-3" << endl;
         cout << "Plseas try again" << endl;
@@ -62,7 +62,6 @@ int main()
             }
             else
             {
-                cout << s.login(username, password) << endl;
                 if (s.login(username, password) == "Clerk")
                 {
                     s.clerkInterface(username);
