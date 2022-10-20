@@ -17,4 +17,4 @@ void Order::showMyOrder(){
     orderDetail.showOrderDetail();
 }
 
-OrderDetail* Order::getOrderDetail(){return this->orderDetail;}
+OrderDetail* Order::getOrderDetail(){return &this->orderDetail;}

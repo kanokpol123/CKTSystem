@@ -19,7 +19,7 @@ public:
     Order();
     void orderFood(Food inputFood);
     void showMyOrder();
-    OrderDetail getOrderDetail();
+    OrderDetail* getOrderDetail();
 };
 
 
