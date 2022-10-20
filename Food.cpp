@@ -1,4 +1,8 @@
 #include "Food.h"
+
+Food::Food(){}
+
+
 Food::Food(string foodName, string size, string typeOfFood, string price)
 {
     this->foodName = foodName;

@@ -1,0 +1,28 @@
+Chicken,CrispyStrip,-,49                                                 
+Chicken,Nuggets,-,59
+Chicken,Chicken Tender,-,59
+Chicken,Hot and Spicy Chicken,-,49
+Chicken,Colonel's Chicken,-,49
+Chicken,Fried Chicken,-,49
+Chicken,Chilli Cheese Pop,-,59
+Chicken,WingZ Zabb,-,49
+Chicken,Spicy Chicken Rice Bowl,-,79
+Chicken,Bowl Chicken Green Curry Rice,-,79
+Chicken,Zinger Burger,-,72
+Chicken,Double Cheese Zinger Burger,-,92
+Chicken,Chicken Pops,-,59
+Chicken,Chick 'n' Bun,-,39
+Chicken,Chink 'n' Roll,-,49
+Snack,Steamed Rice,-,25
+Snack,Regular French Fries(L),55
+Snack,Regular French Fries,X,45
+Snack,Regular French Fries,S,35
+Snack,Egg Tart,-,25
+Snack,Shrimp Donut,-,49
+Snack,Coleslaw,-,49
+Snack,Mashed Potato,L,45
+Snack,Mashed Potato,S,39
+Snack,Tuna Corn Salad,-,45
+Human,Auychai Sea-Pea,X,9999
+Snack,Chickendddddd,M,190
+Snack,Miruly,S,1000000

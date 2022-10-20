@@ -1,11 +1,12 @@
 #ifndef ORDER_H
 #define ORDER_H
 
+#include <vector>
 #include <list>
 #include <iostream>
-#include <OrderDetail.h>
-#include <Customer.h>
-#include <vector>
+#include "OrderDetail.h"
+#include "Customer.h"
+
 using namespace std;
 
 class Order{
@@ -27,6 +28,11 @@ public:
     Customer* getBuyerInfo();
     void addFoodDetail(OrderDetail* orderDetail);
     void showOrder();
+
+    Order();
+    void orderFood(Food inputFood);
+    void showMyOrder();
+    OrderDetail getOrderDetail();
 };
 
 

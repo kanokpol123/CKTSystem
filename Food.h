@@ -1,3 +1,6 @@
+#ifndef FOOD_H
+#define FOOD_H
+
 #include <iostream>
 using namespace std;
 
@@ -8,6 +11,7 @@ class Food {
         string typeOfFood;
         string price;
     public:
+        Food();
         Food(string foodName, string size, string typeOfFood, string price);
         void setFoodName(string foodName);
         string getFoodName();
@@ -15,6 +19,8 @@ class Food {
         string getSize();
         void setType(string type);
         string getType();
-        void setPrice(int price);
+        void setPrice(string price);
         string getPrice();
 };
+
+#endif

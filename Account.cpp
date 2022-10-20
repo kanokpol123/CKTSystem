@@ -1,11 +1,18 @@
 #include "Account.h"
 using namespace std;
 
-string Account::getUsername(){
+Account::Account(string perivilege, string username, string password)
+{
+    this->privilege = privilege;
+    this->username = username;
+    this->password = password;
+}
 
+string Account::getUsername(){
+    
 }
 void Account::setUsername(string user){
-
+    
 }
 
 string Account::getPassword(){

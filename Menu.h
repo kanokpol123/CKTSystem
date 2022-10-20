@@ -11,4 +11,5 @@ public:
     void showSearchFood(string foodName);
     int getAmountINMenu();
     void setAmountINMenu(int amount);
+    void showAllMenu();
 };

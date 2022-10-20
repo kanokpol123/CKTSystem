@@ -1,3 +1,6 @@
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
+
 #include <iostream>
 using namespace std;
 
@@ -10,6 +13,7 @@ private:
     string sidnedDate;
     string privilege;
 public:
+    Account(string privilege, string username, string password);
     string getUsername();
     void setUsername(string sidnedDate);
     string getPassword();
@@ -22,3 +26,5 @@ public:
     void setPrivilege(char privilege);
     void login(string username,string password);
 };
+
+#endif
