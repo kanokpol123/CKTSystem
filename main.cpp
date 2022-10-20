@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <iterator>
+#include "Queue.h"
 #include "System.h"
 using namespace std;
 
@@ -12,9 +13,12 @@ bool exceptionCatch(int min, int max, int choice)
 int main()
 {
     System s;
+    
     int choice;
     string username, password;
     mainMenu :
+    Queue q;
+    q.showQueue();
     cout << setfill('=') << setw(40) << "=" << endl;
     cout << "Lottery BUU" << endl;
     cout << setfill('=') << setw(40) << "=" << endl;

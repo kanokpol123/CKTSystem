@@ -9,6 +9,8 @@ Order::Order(){
     payMeth = "";
 }
 
+string Order::getUsername(){return username;}
+
 void Order::orderFood(Food* inputFood, int inputQty){
     orderDetail.addFood(inputFood, inputQty);
 }
@@ -19,25 +21,31 @@ void Order::showMyOrder(){
 
 OrderDetail* Order::getOrderDetail(){return &this->orderDetail;}
 
-void Order::writeFile()
+void Order::writeFile(string username)
 {
     ofstream menuFile;
-    menuFile.open("Queue.txt",ios::out);
+    menuFile.open("C:\\Users\\Asus\\Documents\\GitHub\\CKTSystem\\Queue.txt",ios::app);
+
     if(menuFile.fail())
     {
         cout << "Can't open user file." << endl;
     }
     else
     {
-        map <Food*, unsigned int>::iterator itr;
-        itr = orderDetail.getFoodList().begin();
-        while (itr != orderDetail.getFoodList().end())
-        {
-            menuFile << itr->first.
-            itr++;
+        menuFile << "*" << username << "\n";
+        for(const auto x : orderDetail.getFoodList()){
+            menuFile << x.first->getType() 
+            << "," << x.first->getFoodName() 
+            << "," << x.first->getSize() 
+            << "," << stoi(x.first->getPrice())
+            << "," << x.second << "\n";
         }
-        
-
         menuFile.close();
     }
+}
+
+void Order::clearOrder(){
+    orderDetail.clearMyOrderDetail();
+    totalfoodQty = 0;
+    totalPay = 0;
 }

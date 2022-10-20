@@ -5,7 +5,7 @@
 #include <iomanip>
 
 Queue::Queue(){
-    
+    readQueue();
 }
 
 Queue::Queue(int queueNumber){
@@ -66,6 +66,7 @@ void Queue::readQueue(){
         {
             line.erase(0,1);
             username = line;
+            tempOrder->username = username;
         }else if(line.find('&') != string::npos){
             enQueue(*tempOrder);
             tempOrder->clearOrder();
@@ -99,7 +100,7 @@ void Queue::showQueue(){
         while(!tempQueueList.empty()){
             cout << "Queue : " << index <<endl;
             cout << setfill('=') << setw(57) << "=" << setfill(' ') << endl;
-            cout << "Customer : " << endl;
+            cout << "Customer : " << tempQueueList.front()->getUsername() << endl;
             tempQueueList.front()->showMyOrder();
             tempQueueList.pop();
             cout << endl;

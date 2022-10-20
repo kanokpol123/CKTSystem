@@ -45,10 +45,12 @@ void OrderDetail::removeFood(int index, int inputQty){
     }
 }
 
+//เมธอดเคลียร์รายการสั่งอาหารทั้งหมด
 void OrderDetail::clearMyOrderDetail(){
     myOrder.clear();
 }
 
+//เเสดงรายการที่สั่งอาหารทั้งหมด เงินทั้งหมดที่ต้องจ่าย
 void OrderDetail::showOrderDetail(){
     totalPay = 0;
     cout << setfill('=') << setw(60) << "=" << setfill(' ') << endl;

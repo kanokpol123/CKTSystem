@@ -18,11 +18,15 @@ OrderDetail orderDetail;
 //customer* buyer;
 
 public:
+    string username;
     Order();
+    string getUsername();
+    void setUsername(string user);
     void orderFood(Food* inputFood, int inputQty);
     void showMyOrder();
     OrderDetail* getOrderDetail();
-    void writeFile();
+    void writeFile(string username);
+    void clearOrder();
 };
 
 

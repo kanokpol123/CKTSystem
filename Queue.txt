@@ -1,0 +1,12 @@
+*Arboo
+Chicken,CrispyStrip,-,49,2
+&
+*Arboo
+Chicken,CrispyStrip,-,49,13
+&
+*Arboo
+Chicken,CrispyStrip,-,49,12
+&
+*Arboo
+Chicken,CrispyStrip,-,49,3
+&
