@@ -10,18 +10,11 @@ Order::Order(){
 }
 
 void Order::orderFood(Food inputFood){
-    orderDetail.addFood(inputFood);
+    orderDetail.addFood(&inputFood);
 }
 
 void Order::showMyOrder(){
-    for(auto i : orderDetail.getFoodList()){
-        cout << i->getFoodName() << " " << i->getSize() << " " << i->getPrice() << endl;
-        totalPay = stoi(i->getPrice());
-        totalfoodQty++;
-    }
-    cout << "Quantity : " << totalfoodQty << endl;
-    cout << "Total : " << totalPay << " Baht" << endl;
-    
+    orderDetail.showOrderDetail();
 }
 
 OrderDetail Order::getOrderDetail(){return this->orderDetail;}

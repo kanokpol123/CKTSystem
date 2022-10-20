@@ -10,20 +10,31 @@ int OrderDetail::getFoodQty(){return foodQty;}
 
 void OrderDetail::addFood(Food* inputFood){ 
     int qty = 0;
-    qty = myOrder[inputFood->getFoodName()];
+    qty = myOrder[inputFood];
     qty++;
-    myOrder[inputFood->getFoodName()] = qty;
-    
+    myOrder[inputFood] = qty;
     foodQty++;
 }
 
 void OrderDetail::removeFood(int index){
+    int i = 0;
+    index--;
 
-    
+    for(auto x : myOrder){
+        if (i == index)
+        {
+            if(x.second > 1){
+                x.second--;
+            }else{
+                myOrder.erase(x.first);
+            }
+        }
+        i++;
+    }
 }
 
 void OrderDetail::showOrderDetail(){
     for(auto i : myOrder){
-        cout << i.first();
+        cout << i.first->getFoodName() << " " << i.first->getSize() << " " << i.first->getPrice() << " " << i.second << endl;
     }
 }
