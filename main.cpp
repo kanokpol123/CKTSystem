@@ -1,7 +1,8 @@
-#include <map>
-#include <iterator>
-#include <iostream>
-#include <iomanip>
+//#include <map>
+//#include <iterator>
+//#include <iostream>
+//#include <iomanip>
+#include "Menu.h"
 //#include "System.h"
 using namespace std;
 int main()
@@ -9,7 +10,7 @@ int main()
     //System s;
     //s.readUserFile();
     //s.printUser();
-    
+    /*
     map <pair<string, string>, int> myMap;
     string name, size; int qty = 0;
     int i = 0;
@@ -33,5 +34,9 @@ int main()
              << "| " << setw(4) << x.second << "||" << endl;
     }
     cout << setfill('=') << setw(34) << "=" << setfill(' ') << endl;
+    */
+    
+    Menu m;
+    m.showAllMenu();
     return 0;
 }

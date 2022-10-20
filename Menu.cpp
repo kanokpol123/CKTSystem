@@ -1,10 +1,39 @@
 #include "Menu.h"
+string Menu::getDate()
+{
+    string day_txt, month_txt;
+    time_t t = time(0);
+    tm* now = localtime(&t);
+    day_txt = to_string(now->tm_mday);
+    month_txt = to_string(now->tm_mon + 1);
+    (day_txt.length() == 1) ? day_txt = "0" + day_txt : day_txt;  
+    (month_txt.length() == 1) ? month_txt = "0" + month_txt : month_txt; 
+    return month_txt + '/' + day_txt + '/' + to_string(now->tm_year + 1900);
+}
+string Menu::insertComma(string number)
+{
+    float temp_num = stof(number);
+    string num_text = to_string(temp_num);
+    string num = num_text.substr(0, num_text.find('.') + 3);
+    int index = num.length() - 6;
+    int check_negative = (temp_num >= 0) ? 0 : 1;
+    while (index > check_negative)
+    {
+        num.insert(index, ",");
+        index -= 3;
+    }
+    return num;
+}
+Menu::Menu()
+{
+    readMenuFile();
+}
 void Menu::readMenuFile()
 {
     string typeOfFood, foodName, size, price; 
     string line;
     ifstream menuFile;
-    menuFile.open("User.txt",ios::in);
+    menuFile.open("Menu.txt",ios::in);
     if(menuFile.fail())
     {
         cout << "Can't open user file." << endl;
@@ -28,13 +57,24 @@ void Menu::readMenuFile()
     }
 }
 vector <Food*> Menu::getMenuList() {return menuList;}
-
 void Menu::addFood(Food* newFood)
 {
-    Food* temp = new Food(newFood->getType(), newFood->getFoodName(), newFood->getSize(), newFood->getPrice());
-    menuList.push_back(temp);
+    bool haveYet = true;
+    for (const auto x : menuList)
+    {
+        if(newFood->getFoodName() == x->getFoodName() && newFood->getSize() == x->getSize())
+        {
+            cout << "This food already have in menu !!!" << endl;
+            haveYet = false;
+        }
+    }
+    if (haveYet)
+    {
+        Food* temp = new Food(newFood->getType(), newFood->getFoodName(), newFood->getSize(), newFood->getPrice());
+        menuList.push_back(temp);
+    }
 }
-void Menu::deleteFood(int index, string foodName)
+void Menu::deleteFood(int index)
 {
     int i = 1;
     itr = menuList.begin();
@@ -62,5 +102,14 @@ void Menu::setAmountINMenu(int amount)
 }
 void Menu::showAllMenu()
 {
-    
+    cout << setfill('=') << setw(54) << "=" << setfill(' ') << endl
+         << "||              Name               | Size |  Price  ||" << endl
+         << setfill('=') << setw(54) << "=" << setfill(' ') << endl;
+    for (const auto x : menuList)
+    {
+        cout << "|| " << setw(32) << left << x->getFoodName()
+             << "|   " << x->getSize() << "  "
+             << "| " << setw(7) << insertComma(x->getPrice()) + ".-" << " ||" << endl;
+    }
+    cout << setfill('=') << setw(54) << "=" << setfill(' ') << endl;
 }
