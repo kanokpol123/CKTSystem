@@ -4,10 +4,6 @@ OrderDetail::OrderDetail(){
     foodQty = 0;
 }
 
-int OrderDetail::getFoodQty() {return foodQty;}
-
-vector <Food*> OrderDetail::getFoodList(){return itemList;}
-
 map<Food*, unsigned int> OrderDetail::getFoodList(){return myOrder;}
 
 int OrderDetail::getFoodQty(){return foodQty;}
@@ -17,13 +13,14 @@ void OrderDetail::addFood(Food* inputFood){
     qty = myOrder[inputFood];
     qty++;
     myOrder[inputFood] = qty;
+    
     foodQty++;
 }
 
 void OrderDetail::removeFood(int index){
     int i = 0;
     index--;
-
+    
     for(auto x : myOrder){
         if (i == index)
         {
@@ -42,6 +39,3 @@ void OrderDetail::showOrderDetail(){
         cout << i.first->getFoodName() << " " << i.first->getSize() << " " << i.first->getPrice() << " " << i.second << endl;
     }
 }
-
-void OrderDetail::setFoodOrder(Food* food) {this->foodOrder = food;}
-Food* OrderDetail::getFoodOrder() {return foodOrder;}
