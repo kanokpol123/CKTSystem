@@ -1,9 +1,8 @@
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
-#include <iostream>
+#include <string>
 using namespace std;
-
 class Account
 {
 private:
@@ -24,7 +23,6 @@ public:
     void setAddress(string address);
     string getPrivilege();
     void setPrivilege(char privilege);
-    void login(string username,string password);
 };
 
 #endif

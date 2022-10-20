@@ -19,6 +19,7 @@ public:
     string getAddress();
     void setAddress(string address);
     void regis(string username, string password, string name, string address, string telephone);
+    Account* getAccount();
 };
 
 #endif

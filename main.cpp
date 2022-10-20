@@ -1,42 +1,92 @@
-//#include <map>
-//#include <iterator>
-//#include <iostream>
-//#include <iomanip>
-#include "Menu.h"
-//#include "System.h"
+#include <iostream>
+#include <iomanip>
+#include <iterator>
+#include "System.h"
 using namespace std;
+
+bool exceptionCatch(int min, int max, int choice)
+{
+    return (choice >= min && choice <= max);
+}
+
 int main()
 {
-    //System s;
-    //s.readUserFile();
-    //s.printUser();
-    /*
-    map <pair<string, string>, int> myMap;
-    string name, size; int qty = 0;
-    int i = 0;
-    while (i < 8)
+    System s;
+    int choice;
+    string username, password;
+    mainMenu :
+    cout << setfill('=') << setw(40) << "=" << endl;
+    cout << "Lottery BUU" << endl;
+    cout << setfill('=') << setw(40) << "=" << endl;
+    cout << "1. Login\n"
+            "2. Register\n"
+            "3. Forget password\n"
+            "0. Exit" << endl;
+    cout << setfill('=') << setw(40) << "=" << endl;
+    cout << "Choose Menu : ";
+    cin >> choice;
+
+    if (!cin >> choice || !exceptionCatch(1, 3, choice))
     {
-        cout << "Enter Name 'n' Size\n";
-        cin >> name >> size;
-        qty = myMap[make_pair(name, size)];
-        qty++;
-        myMap[make_pair(name, size)] = qty;
-        i++;
+        cout << "Choice must be 1-3" << endl;
+        cout << "Plseas try again" << endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+        goto mainMenu;
     }
-   
-    cout << setfill('=') << setw(34) << "=" << setfill(' ') << endl
-         << "||       Name      | Size | Qty ||" << endl
-         << setfill('=') << setw(34) << "=" << setfill(' ') << endl;
-    for (auto x : myMap)
+
+    if (choice == 1)
     {
-        cout << "|| " << setw(16) << left << x.first.first 
-             << "| " << setw(5) << x.first.second 
-             << "| " << setw(4) << x.second << "||" << endl;
+        int nMax = 0;
+        do
+        {
+            cout << setfill('=') << setw(10) << "=" << " LOGIN " 
+                << setfill('=') << setw(11) << "=\n";
+            cout << "Username : ";
+            cin >> username;
+            cout << "Password : ";
+            cin >> password;
+            if (s.login(username, password) == "NotFound")
+            {
+                cout << "Not found!" << endl;
+                nMax++;
+                if (nMax == 3)
+                {
+                    cout << "Plseas try again later" << endl;
+                    goto mainMenu;
+                }
+            }
+            else
+            {
+                cout << s.login(username, password) << endl;
+                if (s.login(username, password) == "Clerk")
+                {
+                    s.clerkInterface(username);
+                }
+                else if (s.login(username, password) == "Customer")
+                {
+                    s.custInterface(username);
+                }
+            }
+        } while (s.login(username, password) == "NotFound");
+        goto mainMenu;
     }
-    cout << setfill('=') << setw(34) << "=" << setfill(' ') << endl;
-    */
-    
-    Menu m;
-    m.showAllMenu();
+    else if (choice == 2)
+    {
+        string username, password, firstname, lastname, telephone;
+        cout << "========== Register ==========" << endl;
+        cout << "Username : ";
+        cin >> username;
+        cout << "Password : ";
+        cin >> password;
+        cout << "Firstname: ";
+        cin >> firstname;
+        cout << "Lastname : ";
+        cin >> lastname;
+        cout << "Telephone : ";
+        cin >> telephone;
+        s.regis(username, password, firstname, lastname, telephone);
+        goto mainMenu;
+    }
     return 0;
 }

@@ -30,7 +30,6 @@
 1,Pika,12312312,Margaret,Peacock,0617845126
 1,sss,sss,sss,sss,0123456789
 1,f,f,f,f,f
-1,a,a,a,a,a
 1,l,l,l,l,0123456789
 1,d,d,d,d,d
 1,0,3,1,23,213
