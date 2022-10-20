@@ -113,3 +113,17 @@ void Menu::showAllMenu()
     }
     cout << setfill('=') << setw(54) << "=" << setfill(' ') << endl;
 }
+Food* Menu::getFood(int index)
+{
+    int i = 1;
+    itr = menuList.begin();
+    while (itr != menuList.end())
+    {
+        if (index == i)
+        {
+            return (*itr);
+        }
+        i++;
+        itr++;
+    }
+}

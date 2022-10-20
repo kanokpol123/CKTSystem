@@ -19,6 +19,7 @@ public:
     vector <Food*> getMenuList();
     string getDate();
     string insertComma(string number);
+    Food* getFood(int index);
     void readMenuFile();
     void addFood(Food* newFood);
     void deleteFood(int index);

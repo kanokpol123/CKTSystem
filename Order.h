@@ -1,8 +1,10 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-#include <list>
+//#include <list>
 #include <iostream>
+#include <fstream>
+#include "Customer.h"
 #include "OrderDetail.h"
 
 using namespace std;
@@ -17,9 +19,10 @@ OrderDetail orderDetail;
 
 public:
     Order();
-    void orderFood(Food inputFood);
+    void orderFood(Food* inputFood, int inputQty);
     void showMyOrder();
     OrderDetail* getOrderDetail();
+    void writeFile();
 };
 
 
