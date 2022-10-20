@@ -43,6 +43,7 @@ public:
     //เมธอดลบ Food ใน itemlist ทั้งหมด
     void clearMyOrderDetail();
 
+    int getPayTotal();
     //เมธอดรายการอาหารใน Order
     void showOrderDetail();
 };

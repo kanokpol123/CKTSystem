@@ -50,11 +50,12 @@ void OrderDetail::clearMyOrderDetail(){
     myOrder.clear();
 }
 
+int OrderDetail::getPayTotal(){return totalPay;}
 //เเสดงรายการที่สั่งอาหารทั้งหมด เงินทั้งหมดที่ต้องจ่าย
 void OrderDetail::showOrderDetail(){
     totalPay = 0;
     cout << setfill('=') << setw(60) << "=" << setfill(' ') << endl;
-    cout << "My Order" << endl;
+    cout << "Order" << endl;
     cout << setfill('=') << setw(60) << "=" << setfill(' ') << endl
          << "||              Name               | Size | Qty |  Price  ||" << endl
          << setfill('=') << setw(60) << "=" << setfill(' ') << endl;

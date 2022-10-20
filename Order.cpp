@@ -9,6 +9,10 @@ Order::Order(){
     payMeth = "";
 }
 
+Order::Order(string username){
+    this->username = username;
+}
+
 string Order::getUsername(){return username;}
 
 void Order::orderFood(Food* inputFood, int inputQty){
@@ -21,7 +25,7 @@ void Order::showMyOrder(){
 
 OrderDetail* Order::getOrderDetail(){return &this->orderDetail;}
 
-void Order::writeFile(string username)
+void Order::updateFile(string username)
 {
     ofstream menuFile;
     menuFile.open("C:\\Users\\Asus\\Documents\\GitHub\\CKTSystem\\Queue.txt",ios::app);

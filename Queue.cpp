@@ -50,6 +50,11 @@ void Queue::deQueueByIndex(int index){
             queueList.pop();
             i++;
         }
+        else
+        {
+            queueList.pop();
+            break;
+        }
     }
 }
 
@@ -88,7 +93,7 @@ void Queue::readQueue(){
 
             Food *foodTemp = new Food(foodType, foodName, foodSize, foodPrice);
             tempOrder->orderFood(foodTemp, stoi(foodQty));
-            delete foodTemp;
+            
         }
     }
     queueFile.close();
@@ -103,7 +108,34 @@ void Queue::showQueue(){
             cout << "Customer : " << tempQueueList.front()->getUsername() << endl;
             tempQueueList.front()->showMyOrder();
             tempQueueList.pop();
-            cout << endl;
+            
             index++;
         }
+}
+
+void Queue::updateFile(string username){
+    ofstream queueFile;
+    queueFile.open("C:\\Users\\Asus\\Documents\\GitHub\\CKTSystem\\Queue.txt",ios::out);
+
+    if(queueFile.fail())
+    {
+        cout << "Can't open user file." << endl;
+    }
+    else
+    {
+        while(!queueList.empty()){
+            queueFile << "*" << queueList.front()->getUsername() << "\n";
+            for(auto x : queueList.front()->getOrderDetail()->getFoodList())
+            {
+                queueFile << x.first->getType() << ","
+                         << x.first->getFoodName() << ","
+                         << x.first->getSize() << ","
+                         << x.first->getPrice() << ","
+                         << x.second << "\n";
+            }
+            queueFile << "&\n";
+            queueList.pop();
+        }
+        queueFile.close();
+    }
 }

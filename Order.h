@@ -20,12 +20,13 @@ OrderDetail orderDetail;
 public:
     string username;
     Order();
+    Order(string username);
     string getUsername();
     void setUsername(string user);
     void orderFood(Food* inputFood, int inputQty);
     void showMyOrder();
     OrderDetail* getOrderDetail();
-    void writeFile(string username);
+    void updateFile(string username);
     void clearOrder();
 };
 

@@ -60,7 +60,6 @@ string System::login(string username, string password)
     {
         if(x->getAccount()->getUsername() == username && x->getAccount()->getPassword() == password)
         {
-            cout << x->getAccount()->getUsername() << endl;
             return "Clerk";
         }
     }
@@ -68,7 +67,6 @@ string System::login(string username, string password)
     {
         if(x->getAccount()->getUsername() == username && x->getAccount()->getPassword() == password)
         {
-            cout << x->getAccount()->getUsername() << endl;
             return "Customer";
         }
     }
@@ -117,8 +115,8 @@ void System::custInterface(string username)
                 << "Name : " << x->getFirstName() + " " + x->getLastName() << endl
                 << setfill('=') << setw(10) << "=" << " Menu " 
                 << setfill('=') << setw(11) << "=" << endl
-                << "1. ShowMenu" << endl
-                << "2. "
+                << "1. Order food" << endl
+                << "2. View my order" << endl
                 << "0. Logout" << endl
                 << setfill('=') << setw(27) << "=" << endl;
             break;
@@ -136,7 +134,11 @@ void System::clerkInterface(string username)
                 << "Name : " << x->getFirstName() + " " + x->getLastName() << endl
                 << setfill('=') << setw(10) << "="  << " Menu " 
                 << setfill('=') << setw(11) << "=" << endl
-                << "1. Logout" << endl
+                << "1. Show food" << endl
+                << "2. Show queue" << endl
+                << "3. Add food in menu" << endl
+                << "4. Delete food in menu" << endl
+                << "0. Logout" << endl
                 << setfill('=') << setw(27) << "=" << endl;
             break;
         }

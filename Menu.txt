@@ -23,6 +23,3 @@ Snack,Coleslaw,-,49
 Snack,Mashed Potato,L,45
 Snack,Mashed Potato,S,39
 Snack,Tuna Corn Salad,-,45
-Human,Auychai Sea-Pea,X,99
-Snack,Chickendddddd,M,190
-Snack,Miruly,S,100
