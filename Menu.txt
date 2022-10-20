@@ -1,7 +1,7 @@
 Chicken,CrispyStrip,-,49                                                 
 Chicken,Nuggets,-,59
 Chicken,Chicken Tender,-,59
-Chicken,Hot and Spicy Chicken,-,49
+Chicken,Hot 'n' Spicy Chicken,-,49
 Chicken,Colonel's Chicken,-,49
 Chicken,Fried Chicken,-,49
 Chicken,Chilli Cheese Pop,-,59
@@ -14,7 +14,7 @@ Chicken,Chicken Pops,-,59
 Chicken,Chick 'n' Bun,-,39
 Chicken,Chink 'n' Roll,-,49
 Snack,Steamed Rice,-,25
-Snack,Regular French Fries(L),55
+Snack,Regular French Fries,L,55
 Snack,Regular French Fries,X,45
 Snack,Regular French Fries,S,35
 Snack,Egg Tart,-,25

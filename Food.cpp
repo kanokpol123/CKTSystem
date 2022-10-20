@@ -2,8 +2,7 @@
 
 Food::Food(){}
 
-
-Food::Food(string foodName, string size, string typeOfFood, string price)
+Food::Food(string typeOfFood, string foodName, string size, string price)
 {
     this->foodName = foodName;
     this->size = size;

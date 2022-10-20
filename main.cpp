@@ -1,6 +1,8 @@
-#include <map>
-#include <iterator>
-#include <iostream>
+//#include <map>
+//#include <iterator>
+//#include <iostream>
+//#include <iomanip>
+#include "Menu.h"
 //#include "System.h"
 using namespace std;
 int main()
@@ -8,35 +10,33 @@ int main()
     //System s;
     //s.readUserFile();
     //s.printUser();
-    
-    map<string, int> myMap;
-    string inputFood;
-    cout << "Enter FoodName : " << endl;
-    int qty = 0;
-    for (int i = 0 ; i < 5 ; i++)
+    /*
+    map <pair<string, string>, int> myMap;
+    string name, size; int qty = 0;
+    int i = 0;
+    while (i < 8)
     {
-        cin >> inputFood;
-        qty = myMap[inputFood];
+        cout << "Enter Name 'n' Size\n";
+        cin >> name >> size;
+        qty = myMap[make_pair(name, size)];
         qty++;
-        myMap[inputFood] = qty;
-        cout << myMap[inputFood] << endl;
-
+        myMap[make_pair(name, size)] = qty;
+        i++;
     }
-    cout << endl << endl;
-    map<string, int>::iterator itr;
-
-
-    itr = myMap.begin();
-    while (itr != myMap.end())
+   
+    cout << setfill('=') << setw(34) << "=" << setfill(' ') << endl
+         << "||       Name      | Size | Qty ||" << endl
+         << setfill('=') << setw(34) << "=" << setfill(' ') << endl;
+    for (auto x : myMap)
     {
-        cout << itr->first << " " << itr->second << endl;
-        itr++;
+        cout << "|| " << setw(16) << left << x.first.first 
+             << "| " << setw(5) << x.first.second 
+             << "| " << setw(4) << x.second << "||" << endl;
     }
-    cout << endl << endl;
+    cout << setfill('=') << setw(34) << "=" << setfill(' ') << endl;
+    */
     
-    for(auto i : myMap){
-        cout << i.first << " " << i.second << endl;
-    }
-    
+    Menu m;
+    m.showAllMenu();
     return 0;
 }
