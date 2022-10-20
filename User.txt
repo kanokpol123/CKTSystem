@@ -34,3 +34,5 @@
 1,d,d,d,d,d
 1,0,3,1,23,213
 1,iamboo005,mystoryboo005,auychai,sae-pan,0628500619
+1,iamboo004,mystoryboo005,auychai,sae-pan,0628500619
+1,iamboo005,mystoryboo005,auychai,sae-pan,0628500619

@@ -30,10 +30,6 @@ public:
     void SortAsc();
     void SortDes();
     void updateMenu();
-    void showOnlyChicken();
-    Food* getChickenFood(int index);
-    void showOnlySnack();
-    Food* getSnackFood(int index);
 };
 
 #endif

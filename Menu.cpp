@@ -83,6 +83,22 @@ void Menu::readMenuFile()
     }
 }
 vector <Food*> Menu::getMenuList() {return menuList;}
+void Menu::updateMenu(){
+    ofstream myfile;
+    myfile.open("Menu.txt",ios::out);
+    if(myfile.fail())
+    {
+        cout << "Can't open user file." << endl;
+    }
+    else
+    {
+        for (const auto x : menuList)
+        {
+            myfile << x->getType() << "," << x->getFoodName() << "," << x->getSize() << "," << x->getPrice() << endl;
+        }
+        myfile.close();
+    }
+}
 void Menu::addFood(Food* newFood)
 {
     bool haveYet = true;
@@ -149,107 +165,4 @@ Food* Menu::getFood(int index)
         itr++;
     }
 }
-void Menu::updateMenu(){
-    ofstream myfile;
-    myfile.open("Menu.txt",ios::out);
-    if(myfile.fail())
-    {
-        cout << "Can't open user file." << endl;
-    }
-    else
-    {
-        for (const auto x : menuList)
-        {
-            myfile << x->getType() << "," << x->getFoodName() << "," << x->getSize() << "," << x->getPrice() << endl;
-        }
-        myfile.close();
-    }
-}
-void Menu::showOnlyChicken()
-{
-    vector <Food*> tempChick;
-    for (const auto x : menuList)
-    {
-        if (x->getType() == "Chicken")
-        {
-            tempChick.push_back(x);
-        }
-    }
-    int i = 1;
-    cout << setfill('=') << setw(60) << "=" << setfill(' ') << endl
-         << "|| No  |              Name               | Size |  Price  ||" << endl
-         << setfill('=') << setw(60) << "=" << setfill(' ') << endl;
-    for (const auto x : tempChick)
-    {
-        cout << "|| " << setw(4) << left << to_string(i) + "." 
-            << "| " << setw(32) << left << x->getFoodName()
-            << "|   " << x->getSize() << "  "
-            << "| " << setw(7) << insertComma(x->getPrice()) + ".-" << " ||" << endl;
-            i++;
-    }
-    cout << setfill('=') << setw(60) << "=" << setfill(' ') << endl;
-}
-Food* Menu::getChickenFood(int index)
-{
-    vector <Food*> tempChick;
-    for (const auto x : menuList)
-    {
-        if (x->getType() == "Chicken")
-        {
-            tempChick.push_back(x);
-        }
-    }
-    int i = 1;
-    for (const auto x : tempChick)
-    {
-        if (i == index)
-        {
-            return x;
-        }
-        i++;
-    }
-}
-void Menu::showOnlySnack()
-{
-    vector <Food*> tempSnack;
-    for (const auto x : menuList)
-    {
-        if (x->getType() == "Snack")
-        {
-            tempSnack.push_back(x);
-        }
-    }
-    int i = 1;
-    cout << setfill('=') << setw(60) << "=" << setfill(' ') << endl
-         << "|| No  |              Name               | Size |  Price  ||" << endl
-         << setfill('=') << setw(60) << "=" << setfill(' ') << endl;
-    for (const auto x : tempSnack)
-    {
-        cout << "|| " << setw(4) << left << to_string(i) + "." 
-            << "| " << setw(32) << left << x->getFoodName()
-            << "|   " << x->getSize() << "  "
-            << "| " << setw(7) << insertComma(x->getPrice()) + ".-" << " ||" << endl;
-            i++;
-    }
-    cout << setfill('=') << setw(60) << "=" << setfill(' ') << endl;
-}
-Food* Menu::getSnackFood(int index)
-{
-    vector <Food*> tempSnack;
-    for (const auto x : menuList)
-    {
-        if (x->getType() == "Snack")
-        {
-            tempSnack.push_back(x);
-        }
-    }
-    int i = 1;
-    for (const auto x : tempSnack)
-    {
-        if (i == index)
-        {
-            return x;
-        }
-        i++;
-    }
-}
+
