@@ -25,6 +25,20 @@ int main()
     mainMenu :
     //Queue q;
     //q.showQueue();
+cout << setfill(' ') << " ==================================================================================================" << endl;
+    cout << left << "||  " << left << setw(70) << "" << setw(20) << left << "             xx" << setw(6) << right << "||" << endl;
+    cout << left << "||  " << left << setw(70) << "" << setw(20) << left << "            / .|_" << setw(6) << right << "||" << endl;
+    cout << left << "||  " << left << setw(70) << "" << setw(20) << left << "   (       /(_)_7" << setw(6) << right << "||" << endl;
+    cout << left << "||  " << left << setw(60) << "      __    __      __                    __                   __    " << setw(20) << left << "   ((      /   (" << setw(7) << right << "||" << endl;
+    cout << left << "||  " << left << setw(60) << ".----|  |--|__.----|  |--.-----.-----.   |  |_.-----.----.----|  |--." << setw(20) << left << "  (((____.-'    )" << setw(7) << right << "||" << endl;
+    cout << left << "||  " << left << setw(60) << "|  __|     |  |  __|    <|  -__|     |   |   _|  _  |   _|  __|     |" << setw(20) << left << "   \\\\          /" << setw(7) << right << "||" << endl;
+    cout << left << "||  " << left << setw(60) << "|____|__|__|__|____|__|__|_____|__|__|   |____|_____|__| |____|__|__|" << setw(20) << left << "     \\'-_-_-'`/" << setw(7) << right << "||" << endl;
+    cout << left << "||  " << left << setw(70) << "" << setw(15) << left << "     \\______/" << setw(11) << right << "||" << endl;
+    cout << left << "||  " << left << setw(70) << "" << setw(15) << left << "       _|_\\_" << setw(11) << right << "||" << endl;
+    cout << left << "||  " << left << setw(70) << "" << setw(15) << left << " ''''''''''''''''" << setw(9) << right << "||" << endl;
+    cout << left << "||  " << left << setw(87) << "" << right << setw(9) << "||" << endl;
+    cout << " ==================================================================================================" << endl;
+
     cout << setfill('=') << setw(40) << "=" << endl;
     cout << "Chicken Torch" << endl;
     cout << setfill('=') << setw(40) << "=" << endl;
@@ -403,8 +417,10 @@ int main()
     {
         string username, password, firstname, lastname, telephone;
         cout << "========== Register ==========" << endl;
-        cout << "Username : ";
-        cin >> username;
+        do {
+            cout << "Username : ";
+            cin >> username;
+        } while (s.usernameCheck(username));
         cout << "Password : ";
         cin >> password;
         cout << "Firstname: ";

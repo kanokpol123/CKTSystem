@@ -11,7 +11,7 @@ Queue::Queue(){
 Queue::Queue(int queueNumber){
     queueNumber = queueNumber;
 }
-
+/*
 int Queue::getQueueFromFile(){
     string qNum;
     string line;
@@ -30,8 +30,10 @@ int Queue::getQueueFromFile(){
         Queue(qNum);
         menuFile.close();
     }
+    int fake = 99999;
+    return fake;
 }
-
+*/
 void Queue::enQueue(Order inputOrder){
     Order *temp = new Order();
     *temp = inputOrder;
@@ -115,7 +117,7 @@ void Queue::showQueue(){
 
 void Queue::updateFile(string username){
     ofstream queueFile;
-    queueFile.open("C:\\Users\\Asus\\Documents\\GitHub\\CKTSystem\\Queue.txt",ios::out);
+    queueFile.open("Queue.txt",ios::out);
 
     if(queueFile.fail())
     {

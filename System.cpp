@@ -72,6 +72,19 @@ string System::login(string username, string password)
     }
     return "NotFound";
 }
+bool System::usernameCheck(string username)
+{
+    for (const auto x : cusList)
+    {
+        if (username == x->getAccount()->getUsername())
+        {
+            cout << "This username is already taken" << endl;
+            cout << "Please try again" << endl;
+            return true;
+        } 
+    }
+    return false;
+}
 void System::regis(string username, string password, string firstname, string lastname, string telephone)
 {
     Account* tempA = new Account("1", username, password);
@@ -102,7 +115,54 @@ void System::regis(string username, string password, string firstname, string la
                 << x->getTelephone() << endl;
         }
         myfile.close();
+        cout << "Successfully register" << endl;
     }
+    /*
+    bool haveYet = true;
+    for (const auto x : cusList)
+    {
+        if (username == x->getAccount()->getUsername())
+        {
+            cout << "This username is already taken" << endl;
+            cout << "Please try again" << endl;
+            haveYet = false;
+            break;
+        }
+    }
+    if (haveYet)
+    {
+        Account* tempA = new Account("1", username, password);
+        Customer* tempC = new Customer(telephone, firstname, lastname, tempA);
+        cusList.push_back(tempC);
+
+        ofstream myfile;
+        myfile.open("User.txt",ios::out);
+        if(myfile.fail())
+        {
+            cout << "Can't open user file." << endl;
+        }
+        else
+        {
+            for (const auto x : clerkList)
+            {
+                myfile << x->getAccount()->getPrivilege() << "," 
+                    << x->getAccount()->getUsername() << ","
+                    << x->getAccount()->getPassword() << ","
+                    << x->getFirstName() << "," << x->getLastName() << ",-" << endl;
+            }
+            for (const auto x : cusList)
+            {
+                myfile << x->getAccount()->getPrivilege() << "," 
+                    << x->getAccount()->getUsername() << ","
+                    << x->getAccount()->getPassword() << ","
+                    << x->getFirstName() << "," << x->getLastName() << ","
+                    << x->getTelephone() << endl;
+            }
+            myfile.close();
+            cout << "Successfully register" << endl;
+        }
+    }
+    */
 }
 void System::custInterface(string username)
 {

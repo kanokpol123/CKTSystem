@@ -1,26 +1,28 @@
-Snack,Steamed Rice,-,25
-Snack,Egg Tart,-,25
-Snack,Regular French Fries,S,35
-Snack,Mashed Potato,S,39
-Chicken,Chick 'n' Bun,-,39
-Snack,Regular French Fries,X,45
-Snack,Mashed Potato,L,45
-Snack,Tuna Corn Salad,-,45
-Chicken,WingZ Zabb,-,49
-Chicken,Colonel's Chicken,-,49
-Chicken,CrispyStrip,-,49                                                 
-Chicken,Chink 'n' Roll,-,49
+Chicken,Double Cheese Zinger Burger,-,92
+Chicken,Spicy Chicken Rice Bowl,-,79
+Chicken,Bowl Chicken Green Curry Rice,-,79
+Chicken,Zinger Burger,-,72
+Snack,minecraft,L,59
+Chicken,Chicken Tender,-,59
+Chicken,Chilli Cheese Pop,-,59
+Chicken,Nuggets,-,59
+Chicken,Chicken Pops,-,59
+Snack,Regular French Fries,L,55
 Chicken,Fried Chicken,-,49
 Snack,Shrimp Donut,-,49
 Snack,Coleslaw,-,49
 Chicken,Hot 'n' Spicy Chicken,-,49
-Snack,Regular French Fries,L,55
-Chicken,Nuggets,-,59
-Chicken,Chicken Pops,-,59
-Chicken,Chicken Tender,-,59
-Chicken,Chilli Cheese Pop,-,59
-Chicken,Zinger Burger,-,72
-Chicken,Spicy Chicken Rice Bowl,-,79
-Chicken,Bowl Chicken Green Curry Rice,-,79
-Chicken,Double Cheese Zinger Burger,-,92
+Chicken,WingZ Zabb,-,49
+Chicken,Colonel's Chicken,-,49
+Chicken,CrispyStrip,-,49                                                 
+Chicken,Chink 'n' Roll,-,49
+Snack,Tuna Corn Salad,-,45
+Snack,Regular French Fries,X,45
+Snack,Mashed Potato,L,45
+Chicken,Chick 'n' Bun,-,39
+Snack,Mashed Potato,S,39
+Snack,Regular French Fries,S,35
+Snack,Steamed Rice,-,25
+Snack,Egg Tart,-,25
 Chicken,ChickAndChicken,M,20
+Chicken,Auychai,S,10

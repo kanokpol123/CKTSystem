@@ -26,6 +26,7 @@ public:
     void regis(string username, string password, string name, string address, string telephone);
     void custInterface(string username);
     void clerkInterface(string username);
+    bool usernameCheck(string usernameCheck);
 };
 
 #endif

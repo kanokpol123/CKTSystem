@@ -28,7 +28,7 @@ OrderDetail* Order::getOrderDetail(){return &this->orderDetail;}
 void Order::updateFile(string username)
 {
     ofstream menuFile;
-    menuFile.open("C:\\Users\\Asus\\Documents\\GitHub\\CKTSystem\\Queue.txt",ios::app);
+    menuFile.open("Queue.txt",ios::app);
 
     if(menuFile.fail())
     {

@@ -164,5 +164,7 @@ Food* Menu::getFood(int index)
         i++;
         itr++;
     }
+    itr = menuList.end();
+    return (*itr);
 }
 
